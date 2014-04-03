@@ -12,17 +12,19 @@ namespace _8.PrimeNumberChecker
         {
             int a = 9;
             int count = 0;
-            for (int i = 1; i < Math.Sqrt(a); i++)
+            bool primary = true;
+            for (int i = 2; i < a; i++)
             {
-                if (a % 9 == 0)
+                if (a % i == 0)
                 {
-                    Console.WriteLine("galse");
+                    primary = false;
+                    count++;
+                   
                 }
-                else
-                {
-                    
-                }
+              
             }
+           
+            Console.WriteLine("IS pRImary: {0}",primary);
             
         }
     }
